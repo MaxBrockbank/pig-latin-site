@@ -37,7 +37,7 @@ $(document).ready(function(){
     }
 
     function isTheQuBeforeAnyOtherVowel(word) {
-      const regexForConsPlusU= /[bcdfghjklmnpqrstvwxyz]?[qu]+/i;
+      const regexForConsPlusU= /[bcdfghjklmnpqrstvwxyz]*q+u?/i;
       if (regexForConsPlusU.test(word.substring(0))) {
         // .match() returns an array
         const wordStartLettersQU = word.match(regexForConsPlusU);
