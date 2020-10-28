@@ -21,7 +21,35 @@ $(document).ready(function(){
       return outputString;
     }
     // addWay(userText);
-    
+    // Example: Sequence --> equencesay
+    function doesTheWordStartWithQu(inputWord) {
+      const qU = /.+qu/i;
+
+      // return true only if the input word starts with exactly "qu" - case-insensitive;
+      return qU.test(inputWord.charAt(0));
+    }
+    function havingRemovedPeskyQUIsNewFirstLetterVowel(een) {  // pretend the input word used to be "queen"
+      // since we know the input word has already had its beginning qu removed, now we need to check its current first letter. If this first letter IS a vowel, return true.
+      const vowelsViaRegExp = /[aeiou]/i
+    }
+    function putTheQUbackOnWithTheRightPigLatinSuffix() {
+      
+    }
+
+    function isTheQuBeforeAnyOtherVowel(word) {
+      const regexForConsPlusU= /[bcdfghjklmnpqrstvwxyz]?[qu]+/i;
+      if (regexForConsPlusU.test(word.substring(0))) {
+        // .match() returns an array
+        const wordStartLettersQU = word.match(regexForConsPlusU);
+        const wordWithoutStartLettersQU = word.replace(regexForConsPlusU, "");
+        console.log( wordWithoutStartLettersQU + wordStartLettersQU.join() + "ay");
+      } else {
+        // Check, "Does my word start with exactly two consonants?"
+        console.log(false);
+      }  
+    }
+    isTheQuBeforeAnyOtherVowel(userText);
+
     // Example: pterodactyl: Where does the first vowel occur in this word?
     // Slice everything before this first vowel
     // Append what just got sliced to the end?....
@@ -30,10 +58,6 @@ $(document).ready(function(){
     // slice all letters occurring before first vowel == PT
     // move those letters to the end of the word == erodactylPT
     // append "ay" to the end of the new word == erodactylPTAY
-
-
-
-
 
     function checkForDoubleStartingConsonants(word) {
       let outputWord;
@@ -52,9 +76,9 @@ $(document).ready(function(){
         console.log(false);
       }  
     }
-    checkForDoubleStartingConsonants(userText);
+    // checkForDoubleStartingConsonants(userText);
 
-
+    // equus
 
 
   });
