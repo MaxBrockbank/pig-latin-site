@@ -17,7 +17,7 @@ This is a Pig Latin translator/converter. Uses JavaScript/jQuery to convert user
 ## Set-up Instructions
 1. Clone this repo to your desktop.
 2. Open index.html in the browser of your choice.
-* <em>Alternatively you can click [HERE](#).</em>
+* <em>Alternatively you can click [HERE](https://maxbrockbank.github.io/pig-latin-site/).</em>
 
 ## Technologies Used
 * HTML
